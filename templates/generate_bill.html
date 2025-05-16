@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Bill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>Generate Bill</h1>
+
+    {% if success %}
+        <p>Bill generated successfully for Patient ID: {{ bill.patient_id }}</p>
+        <p>Total Amount: ₹{{ bill.amount }}</p>
+        <p>Payment Method: {{ bill.payment_method }}</p>
+        <p>Status: {{ bill.status }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label for="patient_id">Enter Patient ID:</label>
+        <input type="number" id="patient_id" name="patient_id" required><br><br>
+
+        <label for="amount">Enter Total Amount (₹):</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="payment_method">Enter Payment Method (Cash/Card/UPI):</label>
+        <select name="payment_method" id="payment_method" required>
+            <option value="Cash">Cash</option>
+            <option value="Card">Card</option>
+            <option value="UPI">UPI</option>
+        </select><br><br>
+
+        <button type="submit">Generate Bill</button>
+    </form>
+
+    <br><br>
+    <a href="{{ url_for('home') }}">🏠 Return Home</a>
+</body>
+</html>

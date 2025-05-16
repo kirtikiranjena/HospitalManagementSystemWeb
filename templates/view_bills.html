@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>View Bills</h1>
+
+    {% if bills %}
+        <table>
+            <tr>
+                <th>Bill ID</th>
+                <th>Patient ID</th>
+                <th>Amount</th>
+                <th>Payment Method</th>
+                <th>Status</th>
+            </tr>
+            {% for bill in bills %}
+                <tr>
+                    <td>{{ bill.bill_id }}</td>
+                    <td>{{ bill.patient_id }}</td>
+                    <td>₹{{ bill.amount }}</td>
+                    <td>{{ bill.payment_method }}</td>
+                    <td>{{ bill.status }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No bills generated yet.</p>
+    {% endif %}
+
+    <br><br>
+    <a href="{{ url_for('home') }}">🏠 Return Home</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the <span>Hospital Management System</span></h1>
+
+        <!-- Added scrolling welcome message -->
+        <div class="welcome-message">
+            <p>✨ We Care For You! Your Health is Our Priority. ✨</p>
+        </div>
+
+        <div class="options">
+            <a href="/add_patient">Add Patient</a>
+            <a href="/view_patient">View Patient</a>
+            <a href="/view_doctors">View Doctors</a>
+            <a href="/generate_bill">Generate Bill</a>
+            <a href="/view_bills">View Bills</a>
+            <a href="/update_payment_status">Update Payment Status</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <footer>
+            <p>Stay Healthy, Stay Safe ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>

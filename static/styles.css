@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffacd; /* Light yellow background */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+    margin-top: 40px;
+}
+
+/* Header Styles */
+h1 {
+    color: #1a237e; /* Dark blue */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #00acc1; /* Light teal for Hospital Management System text */
+}
+
+/* Scrolling welcome message */
+.welcome-message {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #00695c;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: scrollText 10s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Options (links) Styles */
+.options {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.options a {
+    display: inline-block;
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.options a:hover {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    transform: scale(1.05);
+}
+
+/* Optional tweak for alternating buttons (green color) */
+.options a:nth-child(even) {
+    background: linear-gradient(135deg, #66bb6a, #43a047); /* Green buttons alternate */
+}
+
+.options a:nth-child(even):hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32);
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a237e; /* Dark blue */
+    padding: 10px 0;
+}
+
+/* Adding a border animation to the whole page */
+.container {
+    border: 5px solid lightgreen; /* Light green border */
+    padding: 30px;
+    background-color: lightskyblue; /* Light Sky Blue background */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    animation: borderAnimation 3s infinite alternate;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #90ee90; /* Soft green */
+    }
+    50% {
+        border-color: #32cd32; /* Lime green */
+    }
+    100% {
+        border-color: #228b22; /* Forest green */
+    }
+}
+
+/* Stethoscope animation */
+@keyframes spinStethoscope {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.stethoscope {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3000/3000707.png');
+    background-size: cover;
+    animation: spinStethoscope 15s linear infinite;
+    margin-top: 20px;
+}
+
+/* Fade-in animation for page load */
+@keyframes pageFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: pageFadeIn 2s ease-in;
+}

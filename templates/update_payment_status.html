@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Payment Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>Update Payment Status</h1>
+
+    {% if success %}
+        <p>Payment status updated successfully for Bill ID: {{ bill.bill_id }}</p>
+        <p>New Status: {{ bill.status }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label for="bill_id">Enter Bill ID:</label>
+        <input type="number" id="bill_id" name="bill_id" required><br><br>
+
+        <label for="status">Enter New Status (Paid/Pending):</label>
+        <select name="status" id="status" required>
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+        </select><br><br>
+
+        <button type="submit">Update Status</button>
+    </form>
+
+    <br><br>
+    <a href="{{ url_for('home') }}">🏠 Return Home</a>
+</body>
+</html>

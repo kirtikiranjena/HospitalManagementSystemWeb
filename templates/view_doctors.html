@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Doctors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>View All Doctors</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Doctor Name</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in doctors %}
+            <tr>
+                <td>{{ doctor.name }}</td>
+                <td>{{ doctor.department }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="2">No doctors found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <a href="/">🏠 Return Home</a>
+</body>
+</html>

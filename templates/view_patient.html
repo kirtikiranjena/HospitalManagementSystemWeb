@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Patient</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>View Patient</h1>
+    <form method="POST">
+        <label for="patient_id">Enter Patient ID:</label>
+        <input type="number" id="patient_id" name="patient_id" required><br><br>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if patient %}
+    <h2>Patient Details</h2>
+    <p>Name: {{ patient.name }}</p>
+    <p>Age: {{ patient.age }}</p>
+    <p>Address: {{ patient.address }}</p>
+    <p>Assigned Doctor: {{ patient.doctor }}</p>
+    {% elif patient is not none %}
+    <p>No patient found with that ID.</p>
+    {% endif %}
+    <br><br>
+    <a href="/">🏠 Return Home</a>
+</body>
+</html>
