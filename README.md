@@ -67,15 +67,13 @@ python app.py
 
 http://127.0.0.1:5000/
 
-🗄️ Screenshots (Paste Below)
+🗄️ Screenshots of your home page, patient form, doctor list, etc.
 
-📸 Add screenshots of your home page, patient form, doctor list, etc.
-
-Paste image links like:
-![Home Page](screenshots/home.png) : https://1drv.ms/i/c/3926bb218a99b926/EeaM-q_vc95Lj7W6RnerfJwBPWHRQs6CZ2LCeGDTvl9C5w?e=cW9fgQ
-![Add Patient](screenshots/add_patient.png) : https://1drv.ms/i/c/3926bb218a99b926/EU7tNoR5sCVBiVm5vZLnB3oBPBltkZVGkiVD3LcIBsZh2w?e=oJ3h2E
-![Generate Bill](screenshots/generate.png) : https://1drv.ms/i/c/3926bb218a99b926/EbWM5QxJbIZHo8gtOy9SqGMBo559a85lgRcIKpUjRcwVSQ?e=j6Q0BV
 <img width="1366" height="768" alt="Screenshot (36)" src="https://github.com/user-attachments/assets/df21d91f-f3fa-4c9d-b704-e4379a522bbb" />
+<img width="1366" height="768" alt="Screenshot (37)" src="https://github.com/user-attachments/assets/494aef52-f483-4d26-9b97-cc3c5f813229" />
+<img width="1366" height="768" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/b14900e0-6e24-44d7-9a41-5c00b246c1d2" />
+
+
 
 👷‍♂️ Author
 
